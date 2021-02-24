@@ -9,7 +9,10 @@ This hangman program will take a letter from you and you need to guess a word.<b
 
 ## Installation
 
-You can simply download the files on your computer. In terminal, install by typing `npm install`. And install confetti by typing `npm install --save react-confetti`. And type `npm start` to start the program.
+You can simply download the files on your computer. <br />
+In terminal, install by typing `npm install`.  <br />
+And install confetti by typing `npm install --save react-confetti`.  <br />
+And type `npm start` to start the program.
  
 ## Contributing
 
