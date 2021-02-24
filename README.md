@@ -4,8 +4,8 @@ This hangman program will take a letter from you and you need to guess a word.<b
 
 | Feature | Description |
 | -----: | :----------- |
-|  Slow Mode | <img src="https://github.com/rebeccachoo/javascript-draw-rectangles/blob/main/screenshot1.png?raw=true"  width="400">|
-|  Crazy Mode | <img src="https://github.com/rebeccachoo/javascript-draw-rectangles/blob/main/screenshot2.png?raw=true"  width="400">|
+|  Slow Mode | <img src="https://github.com/rebeccachoo/react-hangman/blob/main/screen1.png?raw=true"  width="400">|
+|  Crazy Mode | <img src="https://github.com/rebeccachoo/react-hangman/blob/main/screen2.png?raw=true"  width="400">|
 
 ## Installation
 
