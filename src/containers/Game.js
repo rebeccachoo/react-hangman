@@ -1,5 +1,6 @@
 import { Component } from "react";
 import styles from "./Game.module.css";
+import Confetti from "react-confetti";
 
 class Game extends Component {
 	constructor(props) {
@@ -12,6 +13,7 @@ class Game extends Component {
 		this.ctx = this.canvas.getContext("2d");
 		document.body.appendChild(this.canvas);
 	}
+
 	state = {
 		inputTrack: [],
 		input: "",
@@ -77,7 +79,7 @@ class Game extends Component {
 			document.getElementById("input").value = "";
 			this.setState({ alert: "" });
 			console.log(this.state.chosenAnswer);
-		}, 1000);
+		}, 10);
 	};
 
 	checkHandler = () => {
@@ -120,19 +122,41 @@ class Game extends Component {
 		let gameoverBtn = "";
 		if (this.state.numOfChance == 0) {
 			gameover = "Game Over!!";
-			gameoverBtn = <button onClick={this.startOver}>Start Over</button>;
+			gameoverBtn = (
+				<button className={styles.startOver} onClick={this.startOver}>
+					One More Game? &#128512;
+				</button>
+			);
 			inputHandle = "disabled";
 		}
 
 		let arr = [...this.state.matched];
 		let showMatched = arr.map((letter) => <span>&nbsp;{letter}&nbsp;</span>);
+		let win = true;
+		let winMsg = "You Win!!!";
+		let winBtn = (
+			<button className={styles.startOver} onClick={this.startOver}>
+				One More Game? &#128512;
+			</button>
+		);
+		arr.map((letter) => {
+			if (letter === "_") {
+				win = false;
+				winMsg = "";
+				winBtn = "";
+			}
+		});
+		if (win) {
+			win = <Confetti />;
+			inputHandle = "disabled";
+		}
 
 		const canvas = document.querySelector("canvas");
 		canvas.style.paddingTop = "20px";
 
 		let stageWidth = canvas.width;
 		let middleWidth = "";
-		middleWidth > 400 ? (middleWidth = 400) : (middleWidth = stageWidth / 2);
+		middleWidth > 300 ? (middleWidth = 300) : (middleWidth = stageWidth / 2);
 		const ctx = canvas.getContext("2d");
 
 		ctx.beginPath();
@@ -245,6 +269,7 @@ class Game extends Component {
 
 		return (
 			<div className={styles.Game}>
+				{win}
 				<div className={styles.Title}>Hangman Alphabet Guess Game</div>
 				<div className={styles.Exp}>
 					You have 10 chances to guess. Good luck!
@@ -261,7 +286,6 @@ class Game extends Component {
 					<input
 						type="text"
 						id="input"
-						className={styles.Disabled}
 						onChange={this.changeHandler}
 						disabled={inputHandle}
 					/>
@@ -276,6 +300,8 @@ class Game extends Component {
 					<div>You have {this.state.numOfChance} chances.</div>
 					<div>{gameover}</div>
 					<div>{gameoverBtn}</div>
+					<div>{winMsg}</div>
+					<div>{winBtn}</div>
 				</div>
 			</div>
 		);
