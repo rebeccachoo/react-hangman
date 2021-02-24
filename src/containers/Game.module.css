@@ -46,3 +46,11 @@
 	font-size: 12px;
 	padding-top: 10px;
 }
+.MatchWord {
+	width: 300px;
+	height: 50px;
+	font-size: 20px;
+	margin-bottom: 30px;
+	background-color: #cbe896;
+	border-radius: 5px;
+}
