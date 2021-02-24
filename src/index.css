@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=McLaren&display=swap");
+
+body {
+	margin: 0;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: "McLaren", source-code-pro, Menlo, Monaco, Consolas,
+		"Courier New", monospace;
+	font-size: 20px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: #aac0aa;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	user-select: none;
+	-ms-user-select: none;
+}
+
+canvas {
+	width: 100%;
+	height: 50%;
+}
