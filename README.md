@@ -1,6 +1,6 @@
 # React - Hangman
 
-This hangman program will take a letter from you and you need to guess a word to win. I<br /><br />
+This hangman program will take a letter from you and you need to guess a word to win. <br /><br />
 
 | Feature | Description |
 | -----: | :----------- |
