@@ -1,6 +1,6 @@
 # React - Hangman
 
-This hangman program will take a letter from you and you need to guess a word to win. If you fails to guess a letter in the word, it will draw a hangman and if it draws a complete man you will lose the game. <br />In this app, answers are names of animals but you can modify answers in the list.<br />This program uses Javascript canvas to draw. <br />You can modify the list of the answers.<br />
+This hangman program will take a letter from you and you need to guess a word to win. If you fails to guess a letter in the word, it will draw a hangman and if it draws a complete man you will lose the game. <br />In this app, answers are names of animals but you can modify answers in the list.<br />This program uses Javascript canvas to draw. <br />You can modify the list of the answers.<br /> 
 
 | Feature | Description |
 | -----: | :----------- |
